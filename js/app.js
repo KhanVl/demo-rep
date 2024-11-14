@@ -83,11 +83,43 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-pagination',
     },
 
+   
+
     // autoplay:{
 
     //     // delay: 3000,
     // },
+    
   
   
   });
+ 
 
+const slider = document.querySelector('.swiper');
+
+function mobileSlider() {
+	if (window.innerWidth <= 768 && slider.dataset.mobile == 'false') {
+		mySwiper = new Swiper(slider, {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			loop: true,
+			slideClass: 'section-item',
+           
+		});
+
+		slider.dataset.mobile = 'true';
+	}
+
+	if (window.innerWidth > 768) {
+		slider.dataset.mobile = 'false';
+		if (slider.classList.contains('swiper-container-initialized')) {
+			mySwiper.destroy();
+		}
+	}
+}
+
+mobileSlider()
+
+window.addEventListener('resize', () => {
+	mobileSlider();
+});

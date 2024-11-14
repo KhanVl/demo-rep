@@ -40,18 +40,22 @@ a{
 }
 
 .app-header{
-    padding: 24px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    min-width: 320px;
-    display: flex;
-    align-items: center;
     background-color: #fff;
     border-bottom: 1px solid #d9fff5;
     z-index: 99;
+    min-width: 320px;
+}
+
+.app-header__inner{
+    padding: 24px;
+    display: flex;
+    align-items: center;
     display: none;
+    
 }
 
 
@@ -341,13 +345,14 @@ a{
 
 
 .section-nav-wrapper{
-padding: 24px 0 12px 0;
+    padding: 24px 0 12px 0;
 }
 
 .section-nav__items{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .section-nav__items li{
@@ -457,11 +462,13 @@ padding: 24px 0 12px 0;
 .section-item{
     display: inline-flex;
     margin-bottom: 16px;
-    margin-right: 32px;
 }
 
 .section-items__wrapper{
     min-width: 0;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
 }
 
 .section-item:nth-last-child(4n){
@@ -697,13 +704,81 @@ padding: 24px 0 12px 0;
     display: none;
 }
 
+.popup__button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    padding: 4px 5px 4px 15px;
+    background: #FF3E79;
+    font-weight: bold;
+    font-family: 'TT Lakes';
+    max-width: 136px;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.services-item__button{
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+
+.services-item__title{
+    display: none;
+}
+
+.services-items__titles{
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 0.2fr 0.3fr
+}
+
+.services-item__inner{
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 0.2fr 0.3fr;
+    padding: 15px 0;
+}
+.services-items__titles{
+    margin-bottom: 15px;
+}
+
+.services-items__title{
+    color: #7E7E82;
+    font-weight: 500;
+}
+
+.services-items__wrapper{
+    background: #fff;
+    border-radius: 6px;
+    padding: 5px 15px;
+}
+
+.services-item__block{
+    display: inline-flex;
+    align-items: center;
+}
+
+
+.services-item{
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.services-item:last-child{
+    border-bottom: none;
+}
+
+.services-items{
+    margin-bottom: 20px;
+}
+
+
 
 
 @media only screen and (max-width: 1439px){
-    .section-item{
-        margin-right: 10px;
-    }
-
     
     .section-type{
         margin-right: 10px;
@@ -729,7 +804,7 @@ padding: 24px 0 12px 0;
         padding: 20px;
     }
 
-    .app-header{
+    .app-header__inner{
         display: flex;
         justify-content: space-between;
         padding: 17px 20px;
@@ -1038,23 +1113,7 @@ padding: 24px 0 12px 0;
         color: #FF3E79;
     }
 
-    .popup__button{
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        border: none;
-        text-transform: uppercase;
-        font-size: 14px;
-        color: #fff;
-        padding: 4px 5px 4px 15px;
-        background: #FF3E79;
-        font-weight: bold;
-        font-family: 'TT Lakes';
-        max-width: 136px;
-        width: 100%;
-        border-radius: 50px;
-    }
+    
 
     .popup__description{
         margin-right: 8px;
@@ -1123,6 +1182,66 @@ padding: 24px 0 12px 0;
     .footer-block:last-child{
         text-align: center;
     }
+
+    .services-item{
+        background: #fff;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        border-bottom: none;
+    }
+
+    .services-item__inner{
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .services-item__title{
+        color: #7E7E82;
+        font-weight: 500;
+        padding-bottom: 2px;
+        display: block;
+    }
+
+    
+
+    .services-item__block{
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .services-item__block:last-child{
+        margin-bottom: 0;
+    }
+
+    .services-item__text{
+        color: #1B1C21;
+    }
+
+    .services-item__button{
+        position: absolute;
+        z-index: -1;
+        bottom: 25px;
+        right: 15px;
+    }
+
+    .services-items__titles{
+        display: none;
+    }
+
+    .services-container__button{
+        display: block;
+    }
+
+    .services-items__wrapper{
+        background: inherit;
+        padding: 0;
+    }
+
+
+   
 }
 
 @media only screen and (max-width: 540px){
@@ -1151,6 +1270,9 @@ padding: 24px 0 12px 0;
     .section-text-wrapper{
         padding: 8px 0 20px;
     }
+
+    
+
 }
 
 
