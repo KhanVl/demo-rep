@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="style/swiper-bundle.min.css">
+        <link rel="stylesheet" href="fonts/stylesheet.css">
+        <link rel="stylesheet" href="style/style.css">
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div class="app-main">
@@ -134,7 +136,7 @@
                             <div class="burger__line burger__line-bot"></div>
                         </div>
                     </a>
-                    <div class="header-separator"></div>
+                    <div class="header-separator left"></div>
                     <a href="#" class="app-header__logo"><img src="img/logo.svg" alt=""></a>
                 </div>
                 <div class="app-header__buttons">
@@ -229,9 +231,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="content-block">
+                        <div class="content-block">
                             <div class="content-title">Ремонт техники различных брендов</div>
-                            <div class="section-items-wrapper swiper">
+                            <div class="section-items__wrapper swiper">
                                 <div class="section-items swiper-wrapper">
                                     <div class="section-item swiper-slide">
                                         <a href="#" class="small-card">
@@ -314,10 +316,11 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
+                                <!-- Pagination -->
+                                <div class="swiper-pagination"></div>
+                                 
                             </div>
-                        </div> -->
+                        </div>
                         <div class="content-block">
                             <div class="section-types-wrapper">
                                 <div class="content-title">Ремонт различных видов техники</div>
@@ -369,7 +372,11 @@
                             <div class="section-services-wrapper">
                                 <div class="content-title">цены на услуги</div>
                                 <div class="section-services">
-                                    
+                                    <div class="services-items">
+                                        <div class="services-items__wrapper">
+                                            .services-items__title
+                                        </div>
+                                    </div>
                                     <div class="services-container">
                                         <p class="services-container__text">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
                                         <br>
@@ -389,7 +396,7 @@
                 </div>
             </div>
         </div>
+        <script src="js/swiper-bundle.min.js"></script>
         <script src="js/app.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </body>
 </html>
